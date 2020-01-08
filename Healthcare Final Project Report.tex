@@ -1,0 +1,1787 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.0in,paperwidth=8.5in,left=1.06in,right=1.0in,top=0.69in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{ 
+\vspace{\baselineskip}
+}
+\cfoot{ 
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.3}
+
+
+%%%%%%%%%%%%%%%%%%%% Document code starts here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 2.11in		\includegraphics[width=2.01in,height=2.01in]{./media/image1.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{adjustwidth}{1.0in}{0.0in}
+ The State University of New York - Plattsburgh\par
+
+\end{adjustwidth}
+
+\begin{Center}
+School of Business and Economics
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+Predictive Analytics - MGM 550A
+\end{Center}\par
+
+\begin{Center}
+Fall 2019
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{\textit{Analyzing Healthcare Cost using Predictive Analytics}}\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Final Project Report\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+Submitted By:
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Abhey Sharma\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Danish Rai\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Olajide Obatunwase\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+Submitted to:
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Dr. Shakiba Enayati\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+Submission date:
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont November 11, 2019\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+\textbf{Introduction}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The\ U.S healthcare cost has maintained an upward trajectory over time and is projected to keep increasing. As a share of the nation's GDP, healthcare spending accounted for approximately 18 percent compared to 11 percent in comparable countries like the United Kingdom and Canada.  In dollar terms, the cost of healthcare here is roughly double that of similar countries. Despite the Affordable Care Act reform program, there seems not to be a significant reduction in the trend. However, the objective of this project is to analyze the impact of potential drivers of US healthcare costs and make recommendations on possible strategies for reducing costs in the near future.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.25in}{0.0in}
+\begin{Center}
+\textbf{Previous Work}
+\end{Center}\par
+
+\end{adjustwidth}
+
+\begin{justify}
+A few numbers number of stakeholders and professional bodies have analyzed US healthcare costs using trend analysis without recourse to quantitative research. However, a literature search indicated that very little quantitative research has been done to analyze healthcare costs using predictive analytics.
+\end{justify}\par
+
+\tab 
+\vspace{\baselineskip}\begin{justify}
+In 2018, the Society of Actuaries (SOA) with Kaiser Family Foundation (KFF) carried out a research on the topic: What Can We Do About the Cost of Health Care? The SOA is the world’s largest provider of actuarial research and education and KFF is a nonpartisan source of analysis of current health policy issues, with a long-standing interest in how health spending growth affects government, employers, and consumers. The research work explores U.S Health cost drivers to include price and interest, population, aging. It was reported that 50 percent of the increase in U.S. expenditure from 1996 to 2013 was due to an increase in price and intensity while 23 percent accounted for the population. The report identified that using Technology in Direct Patient Care can lead to prevent and diagnose disease (like cancer) at an early stage.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{2.75in}{0.0in}
+\begin{justify}
+\textbf{Data and Methodology}
+\end{justify}\par
+
+\end{adjustwidth}
+
+\begin{justify}
+The analysis used from S$\&$ P Global (SNL) Market Intelligence, U.S. Bureau of Labor Statistics, Federal Reserve Economic. The project explores the potential predictors of Healthcare costs across 4 states, New York (NY), New Jersey (NJ), Pennsylvania (PA), and Illinois (IL) from 2005 to 2018 to include Population, Medicare and Medicaid claim incurred, Real Median Household Income, Percentage of Aging population(65 and over), Per Aging Female and Per Aging Male. The idea is to evaluate the impact of each variable on healthcare expenditure using statistical learning techniques and make future predictions of healthcare costs.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{2.0in}{0.0in}
+\begin{justify}
+\textbf{Graphical Analysis}
+\end{justify}\par
+
+\end{adjustwidth}
+
+\begin{justify}
+Historically, the cost of healthcare has systematically maintained an upward trend across the 4 states of NY, NJ, PA, and IL. The state of New York, with the highest population growth, incurred the highest costs from 2005 to 2018 relative to NJ, PA and IL.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 0.42in		\includegraphics[width=5.68in,height=4.85in]{./media/image2.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.5in}{0.0in}
+\begin{justify}
+\textbf{Comparing Percentage of Aging Population Female vs Male}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 0.11in		\includegraphics[width=6.44in,height=5.28in]{./media/image3.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+It is important to understand the predictors in detail to perform our analysis. The line chart above explains the percentage of aging population Female vs Male. It can be observed that the female population makes a more significant portion in the chart as compared to the male population. PA has a larger share of female and male elderly population relative to NY, NJ and IL. The female population of PA is a little above 20$\%$  whereas the male represents about 16.2$\%$  of the aging population in the year 2018. The reason for the growth from the year 2005 to 2018 is due to the aging of the baby boomers (individuals born between 1946-1964) and consistently low fertility rate. The female population in NY and NJ have close call between the percentages. It can be said that for NY had about 18.3$\%$  of the female aging population and NJ had 18$\%$  for the year 2018. IL had about 17.4$\%$  for the same population. On the other hand, for male population, similar ranking can be observed in terms of the state as mentioned but NY stated with 11$\%$  and was at about 14.5$\%$  for the male aging population. NJ started at about 10.9$\%$  in 2005 and then was at 14.3$\%$  in 2018. Last but not the least Illinois, there was a huge surge from 10$\%$  in 2005 to 14$\%$  in 2018 for the male aging population.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{Line Chart of Real Median Household Income}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 4 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 0.15in		\includegraphics[width=6.44in,height=5.24in]{./media/image4.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 4 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Real median household income measures the combined gross income of all members of a household. NJ has always topped the charts for Real median household income as compared to NY, IL, PA. NJ has seen a decrease from a little above $\$$ 80,000 in 2005 to $\$$ 74,094 in the year 2018. IL stands at $\$$ 70,000 in 2018, NY $\$$ 65,000 and PA at $\$$ 64,000 and all three states have crossed each other at some point or the other from 2015 - 2018
+\end{justify}\par
+
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{\  }
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{ Line Chart Per Capita Personal Income}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 5 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 0.02in		\includegraphics[width=6.44in,height=5.16in]{./media/image5.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 5 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Per capita income measures the average income earned by each individual in a given area. In the year 2005, NJ was the best among all the four states by providing $\$$ 45,000 average per year to its residents. However, over the years NY slowly picked up to NJ and as of 2018, now NY provides a slightly higher average of $\$$ 69,000 as compared to NJ. IL and PA starting from the year 2009 have been going off of each other, pretty close in terms of their per capita personal income until 2018 at about $\$$ 56000-$\$$ 57,000. This describes the similarity between NY, NJ and IL and PA.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{Line Chart of Population over the Years}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 6 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[H]	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image6.png}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image7.png}
+	\end{subfigure}
+~
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 6 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The population is a crucial factor to consider related to projects of this nature. NY undoubtedly has the highest population in comparison from the year 2005 to 2018. The reason for the population is due to NY being the most famous destination for working, positive net migration rate as well as the presence of the well-known metropolitan cities in the United States. The trend is later followed by IL and PA and NJ is the least in terms of population.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{\ \ \ \ \  Box for Health Care Expenditure per State}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 7 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=4.07in]{./media/image8.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 7 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+The\ plot shows the cost of healthcare per state with New York having the highest cost. The colors show the dominance of the democratic (blue) and republican (red) party for the respective states. NY is the highest in terms of healthcare cost due to higher taxes, and a lot of population.  PA is the next in terms of high expenditure, followed by IL and NJ. From the box plot it can be easily seen the difference between NY and other states, especially NJ. The expenditure gap between those two states is very high.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.25in}{0.0in}
+\begin{Center}
+\textbf{Empirical Analysis}
+\end{Center}\par
+
+\end{adjustwidth}
+
+\setlength{\parskip}{12.0pt}
+\begin{justify}
+\textbf{\textit{Principal Component Analysis (PCA)}}
+\end{justify}\par
+
+\begin{justify}
+The idea of PCA is to identify the variables that capture most of the information in predicting the healthcare costs. Information in this case relates to the sense of variability. With the principal component regression, the first five principal components capture over 90$\%$  of the total variation. This suggests that some of the predictors impact the direction of the response. However, there is no guarantee that the predictors will give the best direction for predicting the response. Fitting a least-square model might show otherwise. In this case, the PCA is a necessary condition but not sufficient condition to determine the direction of the response variable.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.15in}p{0.31in}p{0.33in}p{0.29in}p{0.34in}p{0.3in}p{0.42in}p{0.31in}p{0.33in}p{0.5in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC1}}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC2}}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC3}}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC4}}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC5}}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC6}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC7}}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC8}}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC9}}} \\
+\hhline{----------}
+%row no:2
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Standard deviation}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 2.21}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 1.31}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 1.05}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.93}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.52}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.22}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.2}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.15}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.11}} \\
+\hhline{----------}
+%row no:3
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Proportion of Variance}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.54}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.19}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.12}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.03}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.01}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.01}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.01}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.01}} \\
+\hhline{----------}
+%row no:4
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Cumulative Proportion}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.54}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.74}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.86}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.96}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.99}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.99}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.99}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.99}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 1}} \\
+\hhline{----------}
+%row no:5
+\multicolumn{10}{|p{6.09in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{10pt}{12.0pt}\selectfont \textbf{Weights per PC}}} \\
+\hhline{----------}
+%row no:6
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC1}}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC2}}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC3}}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC4}}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC5}}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC6}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC7}}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC8}}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{8pt}{9.6pt}\selectfont \textbf{PC9}}} \\
+\hhline{----------}
+%row no:7
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Per Capita Personal Income}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.3}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.24}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.3}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.63}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.09}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.04}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.49}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.31}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.11}} \\
+\hhline{----------}
+%row no:8
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Medicaid}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.43}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.03}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.13}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.17}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.17}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.63}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.23}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.53}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.04}} \\
+\hhline{----------}
+%row no:9
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Medicare}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.09}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.15}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.74}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.59}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.19}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.06}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.19}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.02}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.02}} \\
+\hhline{----------}
+%row no:10
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Real Median Household Income}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.03}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.71}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.07}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.18}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.56}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.03}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.3}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.21}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} \\
+\hhline{----------}
+%row no:11
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Population}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.01}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.62}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.34}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.37}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.55}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.02}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.2}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.11}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.07}} \\
+\hhline{----------}
+%row no:12
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Percentage of Aging population 65+}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.43}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.17}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.05}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.45}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.06}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.17}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.73}} \\
+\hhline{----------}
+%row no:13
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Per\_Aging\_M}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.44}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.09}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.12}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.08}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.07}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.54}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.24}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.04}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.65}} \\
+\hhline{----------}
+%row no:14
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Per\_Aging\_F}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.42}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.25}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.1}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.17}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.27}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.5}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.62}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.08}} \\
+\hhline{----------}
+%row no:15
+\multicolumn{1}{|p{1.15in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont \textbf{Year}}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.39}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.06}} & 
+\multicolumn{1}{|p{0.29in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.35}} & 
+\multicolumn{1}{|p{0.34in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.16}} & 
+\multicolumn{1}{|p{0.3in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.52}} & 
+\multicolumn{1}{|p{0.42in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.16}} & 
+\multicolumn{1}{|p{0.31in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.48}} & 
+\multicolumn{1}{|p{0.33in}}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont -0.39}} & 
+\multicolumn{1}{|p{0.5in}|}{\cellcolor[HTML]{FFFFFF}\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.14}} \\
+\hhline{----------}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The first principal component, from the analysis of the PCA, shows that healthcare costs is mostly influenced by Medicaid, Per Capita Personal Income, Percentage of Aging Population, Aging Male, Aging Female and Year. On the other hand, fitting the best subset least square model shows that Year, Population, Real Median Household Income and State are statistically significant in predicting healthcare costs.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 8 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip -0.19in		\includegraphics[width=6.82in,height=3.84in]{./media/image9.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 8 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{justify}
+\textbf{\textit{Correlation Analysis}}
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The correlation matrix plot shows the presence of correlation amongst some of the predictors. Aging Female is strongly correlated with Medicaid. Similarly, Per Aging Population is strongly correlated with Aging Female. These show there is information overlap (redundancy) between the variables.
+\end{justify}\par
+
+\begin{Center}
+\textbf{Variable Selection}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\textbf{ }The features selected for the model was done using ridge regression, lasso, and best subset approach while comparing the MSE error to determine the variables of interest.\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\textbf{\textit{Ridge Regression}}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 9 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image10.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 9 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+Increasing lambda 6 shrinks the coefficient to zero. For a relaxed log lambda value, the coefficients begin to increase, consequently, RSS for the coefficients are likely to increase. Increasing lambda helps to reduce (shrink) the size of the coefficients but not make them zero thereby reducing the variance.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 10 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image11.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 10 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+At deviance = 0.2, 20$\%$  of the variability is being explained with a slight increase in coefficients. However, at Deviance = 0.8, there is a sudden jump with the coefficient being highly inflated, indicating there might be overfitting in that region.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 11 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image12.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 11 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+The plot of log lambda against the mean squared error shows the maximum error tolerance level for lambda to be 0.21. It is worthy of emphasis that the ridge regression performs better when the response variable is a function of many predictors (at least 20)\par
+
+\textbf{\textit{Lasso}}\par
+
+Unlike the ridge approach, using the lasso approach helps to reduce the number of variables by shrinking some of the variables to zero. Consequently, the resulting coefficient estimates are sparse.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 12 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image13.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 12 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+The numbers on the horizontal line of the graph indicates the number of variables that are non-zero for a given lambda. For log lambda of size 4, the resulting number of variables is 4.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 13 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image14.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 13 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\ \ \ \  From 0.8, there is a jump in coefficients indicating the presence of overfitting.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 14 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image15.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 14 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+The plot of log lambda against the mean squared error shows the maximum error tolerance level for lambda to be is 0.4662 with some of the variables having a coefficient of zero.\par
+
+\textbf{\textit{The Best Subset}}\par
+
+\begin{justify}
+The choice of model was done using the best subset and using cross validation approach to choose the best model. The backward and forward approach was not used due to few predictors. 
+\end{justify}\par
+
+\begin{justify}
+The plot displays the selected variables for the best model with a given number of predictors, ranked according to the RSS, Cp, Adjusted R square, and BIC. The model with the lowest BIC is the eight-variable model.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 15 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.14in]{./media/image16.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 15 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The selection of variables was done using the best subset selection approach on the full and trained data set. It turns out that best model under each data set contains six-variable with a low root MSE. The difference in each model are the Year and the Per Capita Personal Income. The training model has Year while the full model has Per Capita Personal Income. However, the best model contains six predictors.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 16 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.18in,height=3.36in]{./media/image17.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 16 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 17 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=4.03in]{./media/image18.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 17 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+K-fold cross validation shows different model sizes and their respective Root MSE. From the plot, a lower Root MSE starts from the six-variable model. The plot shows that the Root MSE does not change a lot after the seven-variable model. Hence, it suffices to choose seven-variable model contain, Population, Per Capita Personal Income, State, Year and Real Median Household Income.\par
+
+\begin{Center}
+\textbf{Regression Analysis}
+\end{Center}\par
+
+\textbf{\textit{Analysis Prior to Variable Selection}}\par
+
+Summary from R-Code\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 18 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.26in]{./media/image19.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 18 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Diagnostic Plot}}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 19 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=3.28in]{./media/image20.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 19 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+{\fontsize{10pt}{12.0pt}\selectfont \textbf{\textit{Fig. 1.0}}\par}
+\end{justify}\par
+
+\begin{justify}
+The\ diagnostic plot shows that the residuals have no non-linear pattern and the model follows a normal distribution. The residuals are approximately normal with few points away from the line towards the lower and upper tail. The scale distribution plot does not indicate any presence of heteroskedasticity which implies the variance of the error term is constant (homoscedasticity).  The plot of the residual vs fitted shows that the observation point is an outlier (the 42-observation point). However, this does not seem to impact the model after fitting the model. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Data Partitioning}}
+\end{justify}\par
+
+\begin{justify}
+The\ training set has all the observations for 2005 to 2013 and the validation set has all the observations from 2014 - 2018.  
+\end{justify}\par
+
+\tab \tab \tab \tab \tab 
+\vspace{\baselineskip}\begin{adjustwidth}{2.25in}{0.0in}
+\begin{justify}
+\textbf{Fitting Model after Variable Selection}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Response Variable: }Healthcare
+\end{justify}\par
+
+\textbf{Predictors: }Population, Per Capita Personal Income, State, Year and Real Median Household Income.\par
+
+\begin{justify}
+Summary from R-Code
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 20 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.42in]{./media/image21.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 20 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 21 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.67in]{./media/image22.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 21 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Fig. 1.4}}
+\end{justify}\par
+
+\begin{justify}
+The diagnostic plot after variable selection shows a better distribution of the residuals as compared to the diagnostic plot figure 1.0. However, mostly it stays the same. This is expected as the final model uses 7 out of 10 variables. The only difference in the plot can be found in the Residual vs Leverage plot as it now shows a potential leverage observation 19 of train data set as compared to the 42nd observation of the entire data set in Figure 1.0.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Testing for Leverage }
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 22 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.53in]{./media/image23.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 22 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+The studentized plot confirms that 19th observation is an outlier and a leverage point.
+\end{justify}\par
+
+\begin{justify}
+{\fontsize{10pt}{12.0pt}\selectfont \textbf{\textit{Fig. 1.5}}\par}
+\end{justify}\par
+
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{\ \ \ \  Diagnostic plot after removing the outlier}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 23 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.53in]{./media/image24.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 23 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Figure 1.6
+\end{justify}\par
+
+\begin{justify}
+All the plots remain the same except in the Residual vs Leverage, the Cook’s distance has no point under it.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.5in}{0.0in}
+\begin{justify}
+\textbf{Evaluating the Final Model using the Cross-Validation Approach}
+\end{justify}\par
+
+\end{adjustwidth}
+
+\begin{justify}
+The scaled test data was predicted using the model created using the training data set and computed the Mean Squared Error (MSE). For the chosen model, the scaled\ Test MSE is 0.054 and Training MSE is 0.0016. Interestingly, after we removed the outlier, the test MSE increases to 0.0734. The RSE on unscaled is $\$$ 28471.36 (in millions) and the training error is $\$$ 19521.67 (in millions).  It is expected that the training error is lower than test error as the model is trained on more observations. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{Predicting Healthcare Cost for 2019}
+\end{justify}\par
+
+\end{adjustwidth}
+
+\begin{justify}
+We estimated the values of our predictors for 2019 and predicted the Healthcare cost for each state. We got the following predicted values for each state.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 24 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=3.41in,height=0.47in]{./media/image25.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 24 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+After adding and subtracting the error of $\$$ 28,471.36, following the threshold for 2019 Healthcare cost.
+\end{justify}\par
+
+PA: ($\$$ 32882.85M, $\$$ 89,825.57M)\par
+
+NJ: ($\$$ 18,620.93M, $\$$ 75,563.65M)\par
+
+NY: ($\$$ 60,456.32M, $\$$ 117,399.04M)\par
+
+IL: ($\$$ 32,826.35M, $\$$ 89,769.07M)\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+As per our model, we expect the cost of healthcare to fall in between the threshold. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{2.0in}{0.0in}
+\begin{justify}
+\textbf{LOOCV vs K-Fold}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 25 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[H]	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image26.png}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image26.png}
+	\end{subfigure}
+~
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 25 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{justify}
+Using leave one out cross validation (loocv), the mean squared error is 0.0123 which is 90198.8 on the scaled data set. LOOCV takes one value as test and uses the rest as training data set, which means such a high error for test is expected. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+Using another approach called K-fold, which divides the data in k different fold and uses one entire fold as test data and rest as training. We do this on 10 folds for our model.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+Using the 10-fold approach, we can see that we are able to achieve a lowest test error of 0.0098, highlighted in green on the chart, on the unscaled data which is lower than LOOCV (0.0123) and the validation set approach (0.054). This shows that the model is capable of calculating the Healthcare cost with the lowest MSE of 0.0098. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+\textbf{Classification}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+For classification, Logistic, Linear Discriminant Analysis and KNN classifiers were used to achieve a model with the lowest misclassification error. We first create 2 classes i.e. Healthcare cost greater than 50th percentile, it will be classified as High, otherwise low.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{2.0in}{0.0in}
+\begin{justify}
+\textbf{For 2 Classes: High and Low }
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Logistic}
+\end{justify}\par
+
+\begin{justify}
+R Code:
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 26 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.96in,height=2.07in]{./media/image27.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 26 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+\textbf{Confusion Matrix (Output from R)}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 27 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=1.93in,height=0.74in]{./media/image28.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 27 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Similar to the linear regression, we fit the model on the training data set. For logistic regression, we used a threshold of 0.5. Any predicted value higher than 0.5 gets classified as High and Low otherwise. To evaluate the model, we computed the misclassification error i.e. 0.40 with an accuracy of 0.60. This is because our model has a high number of False Positives and False Negatives. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{K-Fold for Logistic}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 28 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.83in,height=5.89in]{./media/image29.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 28 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Using the K-fold cross validation approach, we can see that our logistic model is only capable of providing 0.6 as the lowest test error. This means that if we were to use logistic model, we will only be correct 40$\%$  of the time. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Linear Discriminant Analysis}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 29 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip -0.14in		\includegraphics[width=6.44in,height=1.61in]{./media/image30.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 29 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{justify}
+R code
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Confusion Matrix}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 30 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=2.43in,height=0.88in]{./media/image31.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 30 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+In Linear Discriminant Analysis, we set the threshold of the posterior to classify any probability higher than 0.5 as High and Low otherwise. The misclassification error for LDA is 0.15, which is lower than Logistic Regression. This means that the LDA model is able to classify the healthcare cost correctly 85$\%$  of the time. This is seen in the confusion as there only few false positives and false negatives.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 31 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip -1.05in		\includegraphics[width=8.65in,height=4.9in]{./media/image32.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 31 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{justify}
+\textbf{\textit{Plotting the Class for LDA}}
+\end{justify}\par
+
+\begin{justify}
+There is no overlap between high and low. This suggests that using LDA will yield a high prediction accuracy. From the confusion matrix, the LDA model is able to classify the healthcare costs 85$\%$  of the time.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{K-Fold Cross Validation for LDA with 2 Classes}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 32 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=4.03in]{./media/image33.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 32 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+The above plot shows that if the data is folded in 10 different folds, seven out of ten times we get a 100$\%$  accuracy rate. This could be a sign of overfitting the model.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{KNN Classifier }
+\end{justify}\par
+
+\begin{justify}
+R code:
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 33 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=0.92in]{./media/image34.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 33 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+\textbf{Confusion Matrix}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 34 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=1.79in,height=0.69in]{./media/image35.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 34 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.5in}{0.0in}
+\begin{justify}
+\textbf{Misclassification error for K 1:10}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 35 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=4.03in]{./media/image36.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 35 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Contrary to the Logistic and LDA, when K = 4, the KNN classifier gives a misclassification error of 0.30. Interestingly, for Seed =1, there are no false positives and 6 false negatives. This is better than logistic regression but worse than LDA. For K=5, we are able to achieve a misclassification rate of .15, similar to LDA. However, there is a concern for overfitting as the lower the value of K, the lower the chances are of overfitting the model. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+Overall,\ for 2 classes Linear discriminant analysis provides the best accuracy.  We will model LDA for 3 classes to reduce the variance and try to increase the bias by only a little bit. This is to get better accuracy and avoid overfitting the model. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{LDA with three Classes}
+\end{justify}\par
+
+\begin{justify}
+Creating the class: Any value of healthcare costs greater than the 75th quartile will be labeled high in R. Any value below the 25th quartile, will be labeled as Low. Anything in between will be labeled as Moderate.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+R code:
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 36 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=1.68in]{./media/image37.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 36 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+\textbf{Confusion Matrix}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 37 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=2.64in,height=1.03in]{./media/image38.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 37 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 38 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.98in,height=5.65in]{./media/image39.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 38 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{justify}
+The LDA model with 3 classes successfully predicts with an accuracy of 90$\%$  and misclassification rate of 10$\%$ . We look at the chart to understand how that is achieved. The plot shows that there are no instances when High and Low overlaps. There are only a few instances when Low and Medium overlap with each other, resulting in high accuracy. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{1.0in}{0.0in}
+\begin{justify}
+\textbf{K-fold Cross Validation for LDA with 3 Classes}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 39 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.91in,height=6.08in]{./media/image40.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 39 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The plot shows that the model is able to predict 100$\%$  accurately in four out of Ten folds. This is much better when compared to LDA with 2 classes when it was classifying correctly seven folds out of ten. The chances of overfitting are lowered by a high margin when we divide and classify our data on 3 levels rather than 2. 
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+\textbf{Decision Tree Analysis}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\textbf{\textit{Classification Tree }}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 40 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=5.31in]{./media/image41.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 40 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+From the classification tree, State and Population appear to be the two variables for predicting whether the healthcare cost will by high or low. The misclassification error rate is 0.25 for both pruned and unpruned trees.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Regression Tree}}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 41 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image42.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 41 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+Three variables are used in plotting the tree; namely State, Real Median Household Income and Medicare. The test root MSE is 1.063326 indicating that the reg tree model.
+\end{justify}\par
+
+\begin{justify}
+\textbf{\textit{Bagging and Random Forest}}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 42 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image43.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 42 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+For the bagging approach, all the predictors were used in fitting the tree. Just like the classification tree analysis, State and Population are the two most important variables in predicting healthcare costs. Test MSE associated with the unpruned bagging is 0.6312 relative to regression tree 1.063326. However, pruning the tree results in error estimate of 0.6128 relative to unpruned tree of 0.6312\textbf{\textit{ . }}With random forest, six predictors are selected for building the tree. The test MSE for random forest is 0.5498, lower than unpruned bagging but higher than pruned bagging.
+\end{justify}\par
+
+\begin{justify}
+\textbf{\textit{Classification for Bagging}}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 43 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image44.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 43 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+The\ test error is displayed as a function of the number of trees.  The remaining one-third of the observations not used to fit the tree are referred to as the out-of-bag (OOB) observations and its error is lower relative to the MSE. The resulting OOB error is a valid estimate of the test error for the bagged model, since the response for each observation is predicted using only the trees that were not fit using that observation.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Boosting}}
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 44 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=3.36in]{./media/image45.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 44 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\begin{justify}
+Population and State are by far the two most important variables with test MSE error of 0.0111. Overall, boosting yields the smallest error relative to regression, bagging and random forest.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{\textit{Classification for Boosting}}
+\end{justify}\par
+
+\begin{justify}
+The classification for boosting was done using the complete dataset and it yields an error rate of 0.006539531. The classification error rate for boosting yields a lower error rate relative to classification for boosting using OOB.
+\end{justify}\par
+
+
+
+ %%%%%%%%%%%%  Starting New Page here %%%%%%%%%%%%%%
+
+\newpage
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\begin{adjustwidth}{2.0in}{0.0in}
+\begin{justify}
+\textbf{References}
+\end{justify}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+\textcolor[HTML]{333333}{Federal Reserve Economic Data: FRED: St. Louis Fed. (n.d.). Retrieved from https://fred.stlouisfed.org/.}\par
+
+
+\vspace{\baselineskip}
+\textcolor[HTML]{333333}{Home. (n.d.). Retrieved from https://www.spglobal.com/marketintelligence/en/.}\par
+
+
+\vspace{\baselineskip}
+\textcolor[HTML]{333333}{U.S. Bureau of Labor Statistics. (2019, December 6). Retrieved from https://www.bls.gov/.}\par
+
+
+\vspace{\baselineskip}
+
+\printbibliography
+\end{document}
